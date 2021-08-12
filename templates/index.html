@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='ja'>
+    <head>
+        <meta charset="utf-8">
+        <title>月度報告書ツール</title>
+        <link href="/static/css/jquery-ui.css" rel="stylesheet">
+        <link href="/static/css/jquery-ui.multidatespicker.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>月度報告書を簡単に作りたい</h1>
+        <!-- アップロードされたファイルを/registerにPOSTメソッドで送信 -->
+        <form method="POST" action="/edit" enctype="multipart/form-data">
+            <h3>日付別</h3>
+            <input type = "file" name = "hibetsu">
+            <h3>平日合計</h3><div id="mdp-demo"></div>
+            <input type="text" name="day" id="altField">
+            <script src="/static/js/jquery-2.1.1.js"></script>
+            <script src="/static/js/jquery-ui-1.11.1.js"></script>
+            <script src="/static/js/jquery-ui.multidatespicker.js"></script>
+            <script src="/static/js/index.js"></script>
+            <!-- 行間を開けるための改行タグ -->
+            <br>
+            <br>
+            <!-- 送信ボタンとリセットボタン。&nbsp;はスペース -->
+            <input value="作成" type="submit">&nbsp;<input value="リセット" type="reset">
+        </form>
+    </body>
+</html>
